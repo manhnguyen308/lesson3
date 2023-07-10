@@ -3,7 +3,7 @@ orbs:
   python: circleci/python@3.7.0
 
 jobs:
-  build: # this can be any name you choose
+  build_code: # this can be any name you choose
     executor: python/default
     steps:
         - checkout
@@ -12,7 +12,6 @@ jobs:
           command: |
             python3 -m lesson3 ../lesson3
             make install
-        
         - run:
           name: run lint
           command: |
@@ -22,4 +21,4 @@ jobs:
 workflows:
   lesson3:
     jobs:
-      - build
+      - build_code
