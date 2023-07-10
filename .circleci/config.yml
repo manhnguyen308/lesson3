@@ -4,19 +4,20 @@ orbs:
 
 jobs:
   build_code: # this can be any name you choose
-    executor: python/default
+    docker:
+        - image: circleci/python@3.7.0
     steps:
         - checkout
         - run:
-          name: Install dependencies
-          command: |
-            python3 -m lesson3 ../lesson3
-            make install
+              name: Install dependencies
+              command: |
+                python3 -m lesson3 ../lesson3
+                make install
         - run:
-          name: run lint
-          command: |
-            source bin/activate
-            make lint
+              name: run lint
+              command: |
+                source bin/activate
+                make lint
     
 workflows:
   lesson3:
