@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  python: circleci/python@3.7.0
 
 jobs:
   build_code: # this can be any name you choose
