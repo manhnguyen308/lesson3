@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build_code: # this can be any name you choose
     docker:
-        - image: circleci/python@3.9.0
+        - image: circleci/python:3.9.0
     steps:
         - checkout
         - run:
