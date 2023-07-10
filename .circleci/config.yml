@@ -9,14 +9,14 @@ jobs:
         - run:
               name: Install dependencies
               command: |
-                python3 -m venv .
-                source bin/activate
-                make install
+                sudo python3 -m venv .
+                sudo source bin/activate
+                sudo make install
         - run:
               name: run lint
               command: |
-                source bin/activate
-                make lint
+                sudo source bin/activate
+                sudo make lint
     
 workflows:
   lesson3:
